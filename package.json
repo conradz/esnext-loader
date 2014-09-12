@@ -1,0 +1,31 @@
+{
+  "name": "esnext-loader",
+  "version": "1.0.0",
+  "description": "Webpack loader for es-next",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config test.config.js && node test.output.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conradz/esnext-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "esnext",
+    "es6"
+  ],
+  "author": "Conrad Zimmerman <me@conradz.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/conradz/esnext-loader/issues"
+  },
+  "homepage": "https://github.com/conradz/esnext-loader",
+  "devDependencies": {
+    "webpack": "^1.4.0-beta6"
+  },
+  "dependencies": {
+    "esnext": "^0.10.0"
+  }
+}
