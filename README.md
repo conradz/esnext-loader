@@ -2,6 +2,8 @@
 
 [Webpack](http://webpack.github.io) loader for [esnext](https://github.com/esnext/esnext)
 
+[![NPM](http://img.shields.io/npm/v/esnext-loader.svg)](https://www.npmjs.org/package/esnext-loader) [![Build Status](http://img.shields.io/travis/conradz/esnext-loader.svg)](https://travis-ci.org/conradz/esnext-loader)
+
 ## Usage
 
 Just use the `esnext` loader to automatically transpile ES6 code.
