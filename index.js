@@ -1,13 +1,24 @@
 var esnext = require('esnext');
+var loaderUtils = require('loader-utils');
+
+function compileOptions(query, options) {
+    Object.keys(query).forEach(function (name) {
+        options[name] = query[name];
+    });
+
+    return options;
+}
 
 module.exports = function(content) {
     if (this.cacheable)
         this.cacheable();
 
-    var result = esnext.compile(content, {
+    var query = loaderUtils.parseQuery(this.query);
+
+    var result = esnext.compile(content, compileOptions(query, {
         sourceFileName: this.resourcePath,
-        sourceMapName: 'map.json'
-    });
+        sourceMapName: this.resourcePath + '.map'
+    }));
 
     var cb = this.async();
     if (!cb)
