@@ -28,14 +28,12 @@ module.exports = {
 };
 ```
 
-You can set `esnext` configs with query parameters. [All esnext options](https://github.com/esnext/esnext/blob/50b89f461cc7ca93484928540ebbf3e6ba58f302/lib/index.js#L61-L100) are available except for source map.
+You can set `esnext` options by providing query parameters. All esnext options are available except for source map configuration.
 
 ```js
-module.exports = {
-    module: {
-        loaders: [
-            { test: /\.js$/, loader: 'esnext?+arrowFunction,-computedPropertyKeys' }
-        ]
-    }
-};
+// ...
+loaders: [
+    { test: /\.js$/, loader: 'esnext?class=false' }
+]
+// ...
 ```
